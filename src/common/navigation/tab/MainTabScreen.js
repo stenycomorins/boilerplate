@@ -16,7 +16,7 @@ export default function MainTabScreen() {
       barStyle={{backgroundColor: colors.white, paddingBottom: 2}}
     >
       <Tab.Screen 
-        name="HomeTab" 
+        name="HomeStack" 
         component={HomeStackScreen} 
         options={{
           tabBarLabel: HOME_ROOT,
@@ -26,7 +26,7 @@ export default function MainTabScreen() {
         }}
       />
       <Tab.Screen 
-        name="AboutTab" 
+        name="AboutStack" 
         component={AboutStackScreen} 
         options={{
           tabBarLabel: ABOUT_ROOT,
@@ -36,7 +36,7 @@ export default function MainTabScreen() {
         }}
         />
       <Tab.Screen 
-        name="ProfileTab" 
+        name="ProfileStack" 
         component={ProfileStackScreen}
         options={{
           tabBarLabel: PROFILE_ROOT,

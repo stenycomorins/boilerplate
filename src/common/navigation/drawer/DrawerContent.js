@@ -5,7 +5,6 @@ import {Avatar} from 'react-native-paper';
 import { DEFAULT_IMAGE } from '../../utils/Images.js';
 import { colors } from '../../utils/Colors'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { ABOUT_ROOT, HOME_ROOT, PROFILE_ROOT } from '../../utils/NavigationRoot.js';
 
 export default function DrawerContent( props ) {
   
@@ -26,7 +25,7 @@ export default function DrawerContent( props ) {
         label="Home"
         labelStyle={{fontSize:16}}
         onPress={() => {
-          props.navigation.navigate(HOME_ROOT);
+          props.navigation.navigate("HomeStack");
         }}
       />
       <DrawerItem
@@ -36,7 +35,7 @@ export default function DrawerContent( props ) {
         label="About"
         labelStyle={{fontSize:16}}
         onPress={() => {
-          props.navigation.navigate(ABOUT_ROOT);
+          props.navigation.navigate("AboutStack");
         }}
       />
       <DrawerItem
@@ -46,7 +45,7 @@ export default function DrawerContent( props ) {
         label="Profile"
         labelStyle={{fontSize:16}}
         onPress={() => {
-          props.navigation.navigate(PROFILE_ROOT);
+          props.navigation.navigate("ProfileStack");
         }}
       />
     </View>
