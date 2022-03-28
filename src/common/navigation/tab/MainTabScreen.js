@@ -7,13 +7,14 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 const Tab = createMaterialBottomTabNavigator();
 
-export default function MainTabScreen() {
+export default function MainTabScreen({ navigation }) {
 
   return (
     <Tab.Navigator 
       initialRouteName={HOME_ROOT}
       activeColor={colors.red}
       barStyle={{backgroundColor: colors.white, paddingBottom: 2}}
+      backBehavior="history"
     >
       <Tab.Screen 
         name="HomeStack" 
