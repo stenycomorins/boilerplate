@@ -1,4 +1,4 @@
-import { LOGIN } from './actionTypes'
+import { LOGIN, LOGOUT } from './actionTypes'
 
 const INITIAL_STATE = {
     isLoggedIn : false
@@ -10,6 +10,11 @@ export const sessionReducer = ( state = INITIAL_STATE, action ) => {
             return {
                 ...state,
                 isLoggedIn : true
+            }
+        case LOGOUT :
+            return {
+                ...state,
+                isLoggedIn : false
             }
         default :
             return state
