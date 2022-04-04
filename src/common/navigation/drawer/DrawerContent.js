@@ -6,6 +6,7 @@ import {colors} from '../../utils/Colors.js';
 import { DEFAULT_IMAGE } from '../../utils/Images.js';
 import { useDispatch } from 'react-redux';
 import { LOGOUT } from '../../../domain/session/actionTypes.js';
+import { ABOUT_ROOT, HOME_ROOT, PROFILE_ROOT } from '../../utils/NavigationRoot'
 
 export default function DrawerContent( props ) {
 
@@ -31,7 +32,7 @@ export default function DrawerContent( props ) {
             label="Home"
             labelStyle={styles.labelStyle}
             onPress={() => {
-              props.navigation.navigate("HomeStack");
+              props.navigation.navigate("HomeStack",{ screen : HOME_ROOT});
             }}
           />
           <DrawerItem
@@ -41,7 +42,7 @@ export default function DrawerContent( props ) {
             label="About"
             labelStyle={styles.labelStyle}
             onPress={() => {
-              props.navigation.navigate("AboutStack");
+              props.navigation.navigate("AboutStack",{ screen : ABOUT_ROOT});
             }}
           />
           <DrawerItem
@@ -51,7 +52,7 @@ export default function DrawerContent( props ) {
             label="Profile"
             labelStyle={styles.labelStyle}
             onPress={() => {
-              props.navigation.navigate("ProfileStack");
+              props.navigation.navigate("ProfileStack",{screen : PROFILE_ROOT});
             }}
           />
         </View>

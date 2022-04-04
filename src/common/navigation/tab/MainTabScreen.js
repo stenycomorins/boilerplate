@@ -8,12 +8,12 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 const Tab = createMaterialBottomTabNavigator();
 
 export default function MainTabScreen({ navigation }) {
-
+ 
   return (
     <Tab.Navigator 
       initialRouteName={HOME_ROOT}
       activeColor={colors.red}
-      barStyle={{backgroundColor: colors.white, paddingBottom: 2}}
+      barStyle={{backgroundColor: colors.white,height:55}}
       backBehavior="history"
     >
       <Tab.Screen 
@@ -32,7 +32,7 @@ export default function MainTabScreen({ navigation }) {
         options={{
           tabBarLabel: ABOUT_ROOT,
           tabBarIcon: ({color}) => (
-            <MaterialCommunityIcons name="information-outline" color={color} size={26} />
+            <MaterialCommunityIcons name="information-outline" color={color} size={25} />
           ),
         }}
         />
